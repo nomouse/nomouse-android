@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 21
@@ -15,7 +15,6 @@ android {
         }
     }
     defaultConfig {
-        applicationId 'nomouse.core.android.demo'
         minSdkVersion 10
         targetSdkVersion 19
     }
@@ -30,5 +29,4 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
-    compile project(':nomouse-android-core')
 }

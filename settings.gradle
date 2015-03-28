@@ -1,1 +1,2 @@
-include ':nomouse-android',':nomouse-android-demo'
+include ':nomouse-android-core'
+include ':nomouse-android-demo'
