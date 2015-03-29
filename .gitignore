@@ -31,7 +31,7 @@ release.properties
 pom.xml.*
 
 #Gradle
-*.gradle
+#*.gradle
 
 #Android generated
 bin
