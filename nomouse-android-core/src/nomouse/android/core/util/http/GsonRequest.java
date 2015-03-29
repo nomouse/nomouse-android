@@ -1,4 +1,4 @@
-package nomouse.core.util.http;
+package nomouse.android.core.util.http;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;

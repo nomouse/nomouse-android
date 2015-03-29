@@ -1,4 +1,4 @@
-package nomouse.core.util.reflect;
+package nomouse.android.core.util.reflect;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
@@ -12,7 +12,7 @@ import java.util.Date;
 public class ReflectUtils {
     public static void main(String[] args) {
         try {
-            Class cls = Class.forName("nomouse.core.util.reflect.ReflectUtils$User");
+            Class cls = Class.forName("nomouse.android.core.util.reflect.ReflectUtils$User");
             Field[] fields = cls.getFields();
             Method[] methods = cls.getMethods();
             Constructor[] constructors = cls.getConstructors();

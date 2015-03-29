@@ -1,4 +1,4 @@
-package nomouse.core.util.cache;
+package nomouse.android.core.util.cache;
 
 
 public class Image {

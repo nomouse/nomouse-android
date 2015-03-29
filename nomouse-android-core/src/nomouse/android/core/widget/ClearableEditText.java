@@ -1,4 +1,4 @@
-package nomouse.core.android.widget;
+package nomouse.android.core.widget;
 
 import nomouse.core.android.R;
 import android.annotation.SuppressLint;
