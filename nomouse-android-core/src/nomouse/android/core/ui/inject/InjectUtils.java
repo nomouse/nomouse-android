@@ -1,4 +1,4 @@
-package nomouse.android.core.widget.inject;
+package nomouse.android.core.ui.inject;
 
 import android.app.Activity;
 import android.app.Dialog;

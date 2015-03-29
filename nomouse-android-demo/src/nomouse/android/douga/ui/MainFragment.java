@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import nomouse.android.douga.R;
-import nomouse.android.core.widget.inject.InjectView;
+import nomouse.android.core.ui.inject.InjectView;
 
 public class MainFragment extends android.support.v4.app.Fragment {
 

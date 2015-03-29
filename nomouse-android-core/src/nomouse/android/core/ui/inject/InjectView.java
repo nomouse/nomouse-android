@@ -1,4 +1,4 @@
-package nomouse.android.core.widget.inject;
+package nomouse.android.core.ui.inject;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
