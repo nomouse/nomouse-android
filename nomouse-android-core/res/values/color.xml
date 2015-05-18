@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 主题色,由深到浅 -->
+    <color name="app_theme_primary">#ffFD6A58</color>
+    <color name="app_theme_secondary">#ffa54d42</color>
+    <color name="app_theme_tertiary">#ffa54d42</color>
+
+    <!-- 字体颜色,由深到浅 -->
+    <color name="app_font_primary">#ff5e5e5e</color>
+    <color name="app_font_secondary">#ff999999</color>
+    <color name="app_font_tertiary">#ffcccccc</color>
+
+    <!-- 灰度,由深到浅 -->
+    <color name="app_dim_primary">#ffe0e0e0</color>
+    <color name="app_dim_secondary">#ffe8e8e8</color>
+    <color name="app_dim_tertiary">#ffefefef</color>
+
+    <!--  男女主题色-->
+    <color name="female">#fffc6a58</color>
+    <color name="male">#ff00baff</color>
+
+    <!--透明 -->
+    <color name="transparent">#00000000</color>
+    <!--半透明 -->
+    <color name="translucent">#88000000</color>
+
+    <color name="black">#ff000000</color>
+    <color name="red">#ffff0000</color>
+    <color name="green">#ff00ff00</color>
+    <color name="white">#ffffffff</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="gray">#ffdcdcdc</color>
+    <color name="orange">#fffe7700</color>
+
+
+</resources>

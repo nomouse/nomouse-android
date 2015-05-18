@@ -15,7 +15,7 @@ android {
         }
     }
     defaultConfig {
-        applicationId 'nomouse.core.android.demo'
+        applicationId 'nomouse.android.demo'
         minSdkVersion 10
         targetSdkVersion 19
     }
@@ -24,11 +24,17 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+}
 
+repositories {
+    flatDir {
+        dirs 'libs'
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: '*.jar')
     compile project(':nomouse-android-core')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile(name: 'ptr', ext: 'aar')
 }

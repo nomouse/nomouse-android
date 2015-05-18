@@ -17,4 +17,63 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+    <!-- Text Styles -->
+    <style name="LX.TextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/app_font_primary</item>
+        <item name="android:textSize">@dimen/text</item>
+    </style>
+
+    <style name="LX.TextAppearance.Inverse" parent="@android:style/TextAppearance.Inverse">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text</item>
+    </style>
+
+    <style name="LX.TextAppearance.Small" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">@color/app_font_secondary</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="LX.TextAppearance.Small.Inverse" parent="@android:style/TextAppearance.Small.Inverse">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="LX.TextAppearance.Micro" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/app_font_tertiary</item>
+        <item name="android:textSize">@dimen/text_miro</item>
+    </style>
+
+    <style name="LX.TextAppearance.Micro.Inverse" parent="LX.TextAppearance.Micro">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_miro</item>
+    </style>
+
+    <style name="LX.TextAppearance.Number" parent="LX.TextAppearance.Micro">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="LX.TextAppearance.Medium" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/app_font_secondary</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="LX.TextAppearance.Medium.Inverse" parent="@android:style/TextAppearance.Medium.Inverse">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="LX.TextAppearance.Large" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">@color/app_font_primary</item>
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="LX.TextAppearance.Large.Inverse" parent="@android:style/TextAppearance.Large.Inverse">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="LX.TextAppearance.Number.Inverse" parent="LX.TextAppearance.Number">
+        <item name="android:textSize">10sp</item>
+    </style>
+
 </resources>

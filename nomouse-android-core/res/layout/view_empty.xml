@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/view_empty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dip">
+
+    <TextView
+        android:id="@id/text_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="8dp"
+        android:drawableTop="@drawable/ic_view_empty"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="#E5E5E5"></TextView>
+
+</LinearLayout>

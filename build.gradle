@@ -18,5 +18,8 @@ subprojects {
             url "http://localhost:8081/nexus/content/groups/public"
         }
         jcenter()
+        flatDir {
+            dirs 'libs'
+        }
     }
 }

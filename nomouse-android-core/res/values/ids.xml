@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <item name="leftSpacer" type="id"></item>
+    <item name="rightSpacer" type="id"></item>
+
+    <!-- Container -->
+    <item name="activity" type="id" />
+    <item name="fragment" type="id" />
+
+    <!-- ImageView -->
+    <item name="image" type="id" />
+    <item name="image_title" type="id" />
+    <item name="image_content" type="id" />
+    <item name="image_sub" type="id" />
+    <item name="image_inner" type="id" />
+    <item name="image_head" type="id" />
+    <item name="image_foot" type="id" />
+    <item name="image_icon" type="id" />
+    <item name="image_arrow" type="id" />
+
+    <!-- TextView -->
+    <item name="text" type="id" />
+    <item name="text_title" type="id" />
+    <item name="text_content" type="id" />
+    <item name="text_sub" type="id" />
+    <item name="text_head" type="id" />
+    <item name="text_foot" type="id" />
+    <item name="text_name" type="id" />
+    <item name="text_inner" type="id" />
+    <item name="text_status" type="id" />
+    <item name="text_time" type="id" />
+    <item name="text_number" type="id" />
+    <item name="text_message" type="id" />
+
+    <!-- EditView -->
+    <item name="edit" type="id"></item>
+    <item name="edit_account" type="id"></item>
+    <item name="edit_password" type="id"></item>
+    <item name="edit_search" type="id"></item>
+    <item name="edit_content" type="id"></item>
+
+    <!-- RadioButton -->
+    <item name="radio" type="id"></item>
+
+    <!--CheckBox -->
+    <item name="check" type="id"></item>
+
+    <!-- ListView -->
+    <item name="listview" type="id" />
+    <item name="listview_head" type="id" />
+    <item name="listview_footer" type="id" />
+
+    <!-- Button -->
+    <item name="button" type="id" />
+    <item name="button1" type="id" />
+    <item name="button2" type="id" />
+    <item name="button_submit" type="id" />
+    <item name="button_enter" type="id" />
+    <item name="button_cancel" type="id" />
+    <item name="button_positive" type="id" />
+    <item name="button_negative" type="id" />
+
+    <!-- GridView -->
+    <item name="gridview" type="id" />
+    <item name="gridview2" type="id" />
+
+    <!-- ProgressBar -->
+    <item name="progress" type="id" />
+
+    <!-- WebView -->
+    <item name="webview" type="id" />
+
+    <!-- WebView -->
+    <item name="radiogroup" type="id" />
+
+    <!-- ViewPager -->
+    <item name="viewpager" type="id" />
+    <item name="viewpager_indicator" type="id" />
+
+    <!-- Layout -->
+    <item name="layout_left" type="id" />
+    <item name="layout_right" type="id" />
+    <item name="layout_top" type="id" />
+    <item name="layout_bottom" type="id" />
+    <item name="layout_root" type="id" />
+    <item name="layout_content" type="id" />
+    <item name="layout_nav" type="id" />
+    <item name="layout_inner" type="id" />
+    <item name="layout_sub" type="id" />
+    <item name="layout_head" type="id" />
+    <item name="layout_foot" type="id" />
+    <item name="layout_start" type="id" />
+    <item name="layout_end" type="id" />
+    <item name="layout_image" type="id" />
+
+
+    <!-- View -->
+    <item name="view_error" type="id" />
+    <item name="view_empty" type="id" />
+    <item name="view_loading" type="id" />
+
+
+</resources>

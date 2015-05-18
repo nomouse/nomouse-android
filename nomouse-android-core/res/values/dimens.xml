@@ -1,0 +1,54 @@
+<resources>
+
+    <dimen name="text_large">@dimen/px48</dimen>
+    <dimen name="text_medium">@dimen/px36</dimen>
+    <dimen name="text">@dimen/px30</dimen>
+    <dimen name="text_small">@dimen/px24</dimen>
+    <dimen name="text_miro">@dimen/px22</dimen>
+    <dimen name="text_number">@dimen/px20</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="layout_bottom">@dimen/px100</dimen>
+    <dimen name="layout_top">@dimen/px100</dimen>
+    <dimen name="layout">@dimen/px150</dimen>
+
+    <dimen name="margin_large">@dimen/px32</dimen>
+    <dimen name="margin_medium">@dimen/px22</dimen>
+    <dimen name="margin">@dimen/px16</dimen>
+    <dimen name="margin_small">@dimen/px8</dimen>
+    <dimen name="margin_miro">@dimen/px4</dimen>
+
+    <dimen name="list_item">@dimen/px150</dimen>
+    <dimen name="list_item_small">@dimen/px100</dimen>
+    <dimen name="list_divider">1dp</dimen>
+
+    <dimen name="image_large">@dimen/px200</dimen>
+    <dimen name="image_medium">@dimen/px130</dimen>
+    <dimen name="image">@dimen/px100</dimen>
+    <dimen name="image_small">@dimen/px64</dimen>
+    <dimen name="image_miro">@dimen/px48</dimen>
+
+    <dimen name="px4">2dp</dimen>
+    <dimen name="px8">4dp</dimen>
+    <dimen name="px16">8dp</dimen>
+    <dimen name="px20">10dp</dimen>
+    <dimen name="px22">11dp</dimen>
+    <dimen name="px24">12dp</dimen>
+    <dimen name="px30">15dp</dimen>
+    <dimen name="px32">16dp</dimen>
+    <dimen name="px36">18dp</dimen>
+    <dimen name="px48">24dp</dimen>
+
+    <dimen name="px64">32dp</dimen>
+    <dimen name="px100">55dp</dimen>
+    <dimen name="px130">65dp</dimen>
+    <dimen name="px150">75dp</dimen>
+    <dimen name="px183">97dp</dimen>
+    <dimen name="px200">100dp</dimen>
+    <dimen name="px350">175dp</dimen>
+
+
+</resources>
