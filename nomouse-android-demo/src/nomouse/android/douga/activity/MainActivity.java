@@ -1,9 +1,10 @@
-package nomouse.android.douga.ui;
+package nomouse.android.douga.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
 import nomouse.android.douga.R;
+import nomouse.android.douga.fragment.MainFragment;
 
 
 public class MainActivity extends FragmentActivity {

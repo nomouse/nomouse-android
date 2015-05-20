@@ -16,6 +16,7 @@
         android:drawableTop="@drawable/ic_view_empty"
         android:gravity="center"
         android:singleLine="true"
-        android:textColor="#E5E5E5"></TextView>
+        android:textColor="#E5E5E5">
+    </TextView>
 
 </LinearLayout>
