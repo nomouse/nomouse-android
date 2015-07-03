@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="Nomouse" parent="@style/_Nomouse"/>
+
+  <style name="_Nomouse" parent="android:Theme.Holo.Light.DarkActionBar">
+
+    <item name="android:editTextBackground">@drawable/nomouse_edit_text_holo_light</item>
+
+    <item name="android:textColorHighlight">#99ffbb33</item>
+    <item name="android:textSelectHandleLeft">@drawable/nomouse_text_select_handle_left</item>
+    <item name="android:textSelectHandleRight">@drawable/nomouse_text_select_handle_right</item>
+    <item name="android:textSelectHandle">@drawable/nomouse_text_select_handle_middle</item>
+
+    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewNomouse</item>
+
+    <item name="android:listChoiceIndicatorMultiple">@drawable/nomouse_btn_check_holo_light</item>
+
+    <item name="android:listChoiceIndicatorSingle">@drawable/nomouse_btn_radio_holo_light</item>
+
+    <item name="android:buttonStyle">@style/ButtonNomouse</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonNomouse</item>
+
+    <item name="android:dropDownSpinnerStyle">@style/SpinnerNomouse</item>
+
+    <item name="android:progressBarStyleHorizontal">@style/ProgressBarNomouse</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarNomouse</item>
+
+    <item name="android:ratingBarStyle">@style/RatingBarNomouse</item>
+
+    <item name="android:ratingBarStyleIndicator">@style/RatingBarBigNomouse</item>
+
+    <item name="android:ratingBarStyleSmall">@style/RatingBarSmallNomouse</item>
+
+    <item name="android:buttonStyleToggle">@style/ToggleNomouse</item>
+
+    <item name="android:listChoiceBackgroundIndicator">@drawable/nomouse_list_selector_holo_light</item>
+
+    <item name="android:activatedBackgroundIndicator">@drawable/nomouse_activated_background_holo_light</item>
+
+    <item name="android:fastScrollThumbDrawable">@drawable/nomouse_fastscroll_thumb_holo</item>
+
+  </style>
+
+</resources>

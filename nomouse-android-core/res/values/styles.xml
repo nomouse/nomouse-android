@@ -1,78 +1,61 @@
 <resources>
 
-    <!--
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    -->
-    <style name="AppBaseTheme" parent="android:Theme.Light">
-        <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        -->
-    </style>
-
-    <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-    </style>
-
     <!-- Text Styles -->
-    <style name="LX.TextAppearance" parent="@android:style/TextAppearance">
+    <style name="Nomouse.TextAppearance" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/app_font_primary</item>
         <item name="android:textSize">@dimen/text</item>
     </style>
 
-    <style name="LX.TextAppearance.Inverse" parent="@android:style/TextAppearance.Inverse">
+    <style name="Nomouse.TextAppearance.Inverse" parent="@android:style/TextAppearance.Inverse">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/text</item>
     </style>
 
-    <style name="LX.TextAppearance.Small" parent="@android:style/TextAppearance.Small">
+    <style name="Nomouse.TextAppearance.Small" parent="@android:style/TextAppearance.Small">
         <item name="android:textColor">@color/app_font_secondary</item>
         <item name="android:textSize">@dimen/text_small</item>
     </style>
 
-    <style name="LX.TextAppearance.Small.Inverse" parent="@android:style/TextAppearance.Small.Inverse">
+    <style name="Nomouse.TextAppearance.Small.Inverse" parent="@android:style/TextAppearance.Small.Inverse">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/text_small</item>
     </style>
 
-    <style name="LX.TextAppearance.Micro" parent="@android:style/TextAppearance">
+    <style name="Nomouse.TextAppearance.Micro" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/app_font_tertiary</item>
         <item name="android:textSize">@dimen/text_miro</item>
     </style>
 
-    <style name="LX.TextAppearance.Micro.Inverse" parent="LX.TextAppearance.Micro">
+    <style name="Nomouse.TextAppearance.Micro.Inverse" parent="Nomouse.TextAppearance.Micro">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/text_miro</item>
     </style>
 
-    <style name="LX.TextAppearance.Number" parent="LX.TextAppearance.Micro">
+    <style name="Nomouse.TextAppearance.Number" parent="Nomouse.TextAppearance.Micro">
         <item name="android:textSize">10sp</item>
     </style>
 
-    <style name="LX.TextAppearance.Medium" parent="@android:style/TextAppearance.Medium">
+    <style name="Nomouse.TextAppearance.Medium" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">@color/app_font_secondary</item>
         <item name="android:textSize">@dimen/text_medium</item>
     </style>
 
-    <style name="LX.TextAppearance.Medium.Inverse" parent="@android:style/TextAppearance.Medium.Inverse">
+    <style name="Nomouse.TextAppearance.Medium.Inverse" parent="@android:style/TextAppearance.Medium.Inverse">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/text_medium</item>
     </style>
 
-    <style name="LX.TextAppearance.Large" parent="@android:style/TextAppearance.Large">
+    <style name="Nomouse.TextAppearance.Large" parent="@android:style/TextAppearance.Large">
         <item name="android:textColor">@color/app_font_primary</item>
         <item name="android:textSize">@dimen/text_large</item>
     </style>
 
-    <style name="LX.TextAppearance.Large.Inverse" parent="@android:style/TextAppearance.Large.Inverse">
+    <style name="Nomouse.TextAppearance.Large.Inverse" parent="@android:style/TextAppearance.Large.Inverse">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/text_large</item>
     </style>
 
-    <style name="LX.TextAppearance.Number.Inverse" parent="LX.TextAppearance.Number">
+    <style name="Nomouse.TextAppearance.Number.Inverse" parent="Nomouse.TextAppearance.Number">
         <item name="android:textSize">10sp</item>
     </style>
 
