@@ -1,10 +1,10 @@
-package nomouse.android.douga.activity;
+package nomouse.demo.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
 import nomouse.android.douga.R;
-import nomouse.android.douga.fragment.LoginFragment;
+import nomouse.demo.fragment.LoginFragment;
 
 
 public class LoginActivity extends FragmentActivity {
@@ -15,10 +15,10 @@ public class LoginActivity extends FragmentActivity {
 
         getActionBar().setTitle("Douga");
 
-        setContentView(R.layout.abs_activity);
+        setContentView(R.layout.view_container);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.fragment, new LoginFragment())
+                    .add(R.id.view_body, new LoginFragment())
                     .commit();
         }
     }

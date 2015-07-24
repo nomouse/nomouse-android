@@ -1,4 +1,4 @@
-package nomouse.android.douga.fragment;
+package nomouse.demo.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import nomouse.android.douga.R;
-import nomouse.android.douga.activity.LoginActivity;
+import nomouse.demo.activity.LoginActivity;
 
-public class MainFragment extends android.support.v4.app.Fragment {
+public class WelcomeFragment extends android.support.v4.app.Fragment {
 
     private static final int DELAY = 2000;
 
@@ -30,7 +30,7 @@ public class MainFragment extends android.support.v4.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.main_fragment, container, false);
+        View rootView = inflater.inflate(R.layout.welcome_fragment, container, false);
 
         handler.sendMessageDelayed(handler.obtainMessage(DELAY), DELAY);
         return rootView;

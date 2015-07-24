@@ -1,4 +1,4 @@
-package nomouse.android.douga.view.widget;
+package nomouse.demo.widget;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

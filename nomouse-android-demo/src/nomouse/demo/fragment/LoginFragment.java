@@ -1,4 +1,4 @@
-package nomouse.android.douga.fragment;
+package nomouse.demo.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
