@@ -1,5 +1,6 @@
 package nomouse.demo.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import nomouse.android.douga.R;
 import nomouse.android.inject.InjectUtils;
 import nomouse.android.inject.InjectView;
+import nomouse.demo.activity.MainActivity;
 
 public class LoginFragment extends android.support.v4.app.Fragment {
 
@@ -32,7 +34,8 @@ public class LoginFragment extends android.support.v4.app.Fragment {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println(123);
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
             }
         });
 

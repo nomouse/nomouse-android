@@ -4,9 +4,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Iterator;
@@ -17,8 +14,6 @@ import java.util.Iterator;
  * @author nomouse
  */
 public class GsonUtils {
-
-    private static final Logger logger = LoggerFactory.getLogger("GsonUtils");
 
     public static String EMPTY_JSON_OBJECT = "{}";
 
@@ -49,7 +44,7 @@ public class GsonUtils {
         try {
             result = defaultGson.toJson(target);
         } catch (Exception e) {
-            logger.error(e.getMessage());
+            e.printStackTrace();
             if (target instanceof Collection<?>
                     || target instanceof Iterator<?>
                     || target instanceof Enumeration<?>
@@ -75,7 +70,7 @@ public class GsonUtils {
             result = builder.excludeFieldsWithoutExposeAnnotation().create()
                     .toJson(target);
         } catch (Exception e) {
-            logger.error(e.getMessage());
+            e.printStackTrace();
             if (target instanceof Collection<?>
                     || target instanceof Iterator<?>
                     || target instanceof Enumeration<?>
@@ -103,7 +98,7 @@ public class GsonUtils {
         try {
             result = defaultGson.fromJson(source, cls);
         } catch (Exception e) {
-            logger.error(e.getMessage());
+            e.printStackTrace();
         }
 
         return result;
@@ -123,7 +118,7 @@ public class GsonUtils {
         try {
             result = defaultGson.fromJson(source, type.getType());
         } catch (Exception e) {
-            logger.error(e.getMessage());
+            e.printStackTrace();
         }
 
         return result;

@@ -52,10 +52,10 @@ public abstract class AbsAdapter<T> extends BaseAdapter {
     /**
      * 获取Layout布局
      *
-     * @param position
+     * @param res
      * @return
      */
-    public abstract int getLayoutResId(int position);
+    public abstract int getLayoutResId(int res);
 
     /**
      * 渲染
