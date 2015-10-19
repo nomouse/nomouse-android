@@ -9,7 +9,7 @@ import nomouse.android.douga.R;
 import nomouse.demo.widget.PtrListView;
 import nomouse.android.inject.InjectView;
 
-public class ImageFragment extends android.support.v4.app.Fragment {
+public class RecentFragment extends android.support.v4.app.Fragment {
 
     @InjectView()
     private PtrListView listView;

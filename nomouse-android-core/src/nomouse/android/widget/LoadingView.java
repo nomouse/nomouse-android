@@ -1,12 +1,12 @@
 package nomouse.android.widget;
 
 import android.content.Context;
+import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import nomouse.core.android.R;
-import nomouse.util.StringUtils;
 
 /**
  * 加载中页面，第一次进入页面需要加载时显示
@@ -19,19 +19,22 @@ public class LoadingView extends LinearLayout {
 
     // private ProgressBar progressBar;
     private TextView messageView;
-    private String message;
 
     public LoadingView(Context context) {
         super(context);
         this.context = context;
-        this.message = "";
+        setupView();
+    }
+
+    public LoadingView(Context context, AttributeSet attr) {
+        super(context, attr);
+        this.context = context;
         setupView();
     }
 
     public LoadingView(Context context, String message) {
         super(context);
         this.context = context;
-        this.message = message;
         setupView();
     }
 
@@ -42,8 +45,5 @@ public class LoadingView extends LinearLayout {
         // progressBar = (ProgressBar) findViewById(R.id.progress);
 
         messageView = (TextView) findViewById(R.id.text_message);
-        if (StringUtils.isEmpty(message)) {
-            messageView.setVisibility(GONE);
-        }
     }
 }

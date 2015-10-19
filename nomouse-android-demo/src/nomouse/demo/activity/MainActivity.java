@@ -39,7 +39,6 @@ public class MainActivity extends FragmentActivity {
         navGroup.check(R.id.navHome);
     }
 
-
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {

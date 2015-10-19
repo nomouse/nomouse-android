@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@id/view_empty"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_empty"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
     android:padding="16dip">
 
-    <TextView
-        android:id="@id/text_message"
+    <ImageView
+        android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:drawablePadding="8dp"
-        android:drawableTop="@drawable/ic_view_empty"
+        android:layout_above="@id/text"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:scaleType="centerInside"
+        android:src="@android:drawable/sym_def_app_icon" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:gravity="center"
         android:singleLine="true"
-        android:textColor="#E5E5E5">
-    </TextView>
+        android:text="empty"
+        android:textAppearance="@style/Nomouse.TextAppearance" />
 
-</LinearLayout>
+</RelativeLayout>

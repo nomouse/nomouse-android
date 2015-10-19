@@ -47,9 +47,9 @@
     <item name="check" type="id"></item>
 
     <!-- ListView -->
-    <item name="listview" type="id" />
-    <item name="listview_head" type="id" />
-    <item name="listview_footer" type="id" />
+    <item name="list_view" type="id" />
+    <item name="list_view_head" type="id" />
+    <item name="list_view_footer" type="id" />
 
     <!-- Button -->
     <item name="button" type="id" />

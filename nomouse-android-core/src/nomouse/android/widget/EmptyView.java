@@ -1,7 +1,9 @@
 package nomouse.android.widget;
 
 import android.content.Context;
+import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -17,17 +19,20 @@ import nomouse.util.StringUtils;
 public class EmptyView extends LinearLayout {
 
     private Context context;
-    private final static String EMPTY_MESSAGE = "未查询到数据";
 
+    private ImageView imageView;
     private TextView messageView;
 
     public EmptyView(Context context) {
         super(context);
         this.context = context;
         setupView();
+    }
 
-        setText(EMPTY_MESSAGE);
-        setImage(R.drawable.ic_view_empty);
+    public EmptyView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        this.context = context;
+        setupView();
     }
 
     public EmptyView(Context context, int resId, String message) {
@@ -42,7 +47,8 @@ public class EmptyView extends LinearLayout {
     private void setupView() {
         LayoutInflater.from(context).inflate(R.layout.view_empty, this, true);
 
-        messageView = (TextView) findViewById(R.id.text_message);
+        messageView = (TextView) findViewById(R.id.text);
+        imageView = (ImageView) findViewById(R.id.image);
     }
 
     public void setText(String message) {
@@ -53,7 +59,7 @@ public class EmptyView extends LinearLayout {
 
     public void setImage(int resId) {
         if (resId != 0) {
-            messageView.setCompoundDrawablesWithIntrinsicBounds(0, resId, 0, 0);
+            imageView.setImageResource(resId);
         }
     }
 }
