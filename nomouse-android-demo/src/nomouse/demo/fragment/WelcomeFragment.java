@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import nomouse.android.douga.R;
+import nomouse.android.demo.R;
 import nomouse.demo.activity.LoginActivity;
 
 public class WelcomeFragment extends android.support.v4.app.Fragment {

@@ -9,11 +9,12 @@ import android.view.KeyEvent;
 import java.util.HashMap;
 import java.util.Map;
 
-import nomouse.android.douga.R;
+import nomouse.android.demo.R;
 import nomouse.android.inject.InjectUtils;
 import nomouse.android.inject.InjectView;
 import nomouse.android.widget.NestedRadioGroup;
 import nomouse.demo.fragment.HomeFragment;
+import nomouse.demo.fragment.RecentFragment;
 
 
 public class MainActivity extends FragmentActivity {
@@ -64,9 +65,14 @@ public class MainActivity extends FragmentActivity {
         }
         switch (resId) {
             case R.id.navHome:
-                //        setTitle(currentOptionId);
+                setTitle("主页");
                 currentResId = resId;
                 dispatchFragment(HomeFragment.class);
+                break;
+            case R.id.navRecent:
+                setTitle("最新");
+                currentResId = resId;
+                dispatchFragment(RecentFragment.class);
                 break;
         }
     }

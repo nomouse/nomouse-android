@@ -6,7 +6,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import nomouse.android.base.AbsAdapter;
-import nomouse.android.douga.R;
+import nomouse.android.demo.R;
 
 public class HomeListAdapter extends AbsAdapter<String> {
 

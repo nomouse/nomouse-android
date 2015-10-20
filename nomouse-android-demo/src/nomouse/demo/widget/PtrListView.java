@@ -7,8 +7,10 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewStub;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 
@@ -18,11 +20,8 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import java.util.List;
 
 import nomouse.android.base.AbsAdapter;
-import nomouse.android.douga.R;
-import nomouse.android.widget.EmptyView;
-import nomouse.android.widget.ErrorView;
+import nomouse.android.demo.R;
 import nomouse.android.widget.LoadingView;
-
 
 /**
  * 包含下拉刷新和上拉加载更多的ListView
@@ -48,6 +47,9 @@ public class PtrListView<T> extends FrameLayout {
 
     private PullToRefreshListView mainListView;
     private ListView listView;
+
+    private BaseAdapter adapter;
+    private List<T> list;
 
     /**
      * 错误
@@ -116,17 +118,18 @@ public class PtrListView<T> extends FrameLayout {
         inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
+        inflater.inflate(R.layout.ptr_list_view, this, true);
+
         // ListView LoadingView
-        mainLoading = new LoadingView(context);
-        this.addView(mainLoading, LAYOUT_PARAMS);
-        mainLoading.setVisibility(View.VISIBLE);
+        mainLoading = findViewById(R.id.view_loading);
 
-        mainEmpty = new EmptyView(context);
-        this.addView(mainEmpty, LAYOUT_PARAMS);
+        // ListView
+        this.mainListView = (PullToRefreshListView) findViewById(R.id.list_view);
 
-        mainError = new ErrorView(context);
-        this.addView(mainError, LAYOUT_PARAMS);
-        mainError.setOnClickListener(onMainErrorClickListener);
+        // 设置不反弹
+        this.mainListView.setPullToRefreshOverScrollEnabled(false);
+        // 刷新时不允许滑动
+        this.mainListView.setScrollingWhileRefreshingEnabled(false);
 
         // ListView FooterView
         footerContainer = inflater.inflate(R.layout.view_footer_panel, null);
@@ -134,21 +137,9 @@ public class PtrListView<T> extends FrameLayout {
         footerLoading = footerContainer.findViewById(R.id.listview_footer_loading);
         footerError = footerContainer.findViewById(R.id.listview_footer_error);
 
-        // ListView
-        // 设置下拉刷新，默认可以下拉
-        this.mainListView = new PullToRefreshListView(context, mode,
-                PullToRefreshBase.AnimationStyle.FLIP);
-        // 设置不反弹
-        this.mainListView.setPullToRefreshOverScrollEnabled(false);
-        // 刷新时不允许滑动
-        this.mainListView.setScrollingWhileRefreshingEnabled(false);
-
         this.listView = mainListView.getRefreshableView();
         this.listView.setDividerHeight(0);
         this.listView.addFooterView(footerContainer);
-
-        this.addView(mainListView, LAYOUT_PARAMS);
-        // this.mainListView.setVisibility(GONE);
 
         // 注册所有有关ListView的事件
         setOnItemClickListener(onItemClickListener);
@@ -159,7 +150,7 @@ public class PtrListView<T> extends FrameLayout {
         setOnFooterMoreClickListener(onFooterMoreClickListener);
         setOnFooterErrorClickListener(onFooterErrorClickListener);
 
-        // 默认状态
+        this.init();
     }
 
     public boolean isLoading() {
@@ -262,6 +253,12 @@ public class PtrListView<T> extends FrameLayout {
 
     }
 
+    public void setAdapter(BaseAdapter adapter, List<T> list) {
+        this.list = list;
+        this.adapter = adapter;
+        this.mainListView.setAdapter(adapter);
+    }
+
     /**
      * 是否显示主布局
      */
@@ -297,7 +294,6 @@ public class PtrListView<T> extends FrameLayout {
                 footerContainer.setVisibility(GONE);
             }
         }
-
     }
 
     /**
@@ -318,7 +314,6 @@ public class PtrListView<T> extends FrameLayout {
         }
     }
 
-
     /**
      * 是否显示空布局
      */
@@ -326,8 +321,8 @@ public class PtrListView<T> extends FrameLayout {
         boolean flag = (!isLoading && !isError && currentStatus == Status.MAIN_EMPTY);
         if (flag) {
             if (mainEmpty == null) {
-                mainEmpty = new EmptyView(context);
-                this.addView(mainEmpty, LAYOUT_PARAMS);
+                ViewStub mainEmptyStub = (ViewStub) findViewById(R.id.view_empty);
+                mainEmpty = mainEmptyStub.inflate();
             }
             mainEmpty.setVisibility(VISIBLE);
         } else {
@@ -344,8 +339,8 @@ public class PtrListView<T> extends FrameLayout {
         boolean flag = (!isLoading && isError);
         if (flag) {
             if (mainError == null) {
-                mainError = new ErrorView(context);
-                this.addView(mainError, LAYOUT_PARAMS);
+                ViewStub mainErrorStub = (ViewStub) findViewById(R.id.view_error);
+                mainError = mainErrorStub.inflate();
                 mainError.setOnClickListener(onMainErrorClickListener);
             }
             mainError.setVisibility(VISIBLE);
@@ -556,7 +551,58 @@ public class PtrListView<T> extends FrameLayout {
             listView.isLoading = false;
             listView.notifyUIChanged();
         }
-
     }
+
+
+    public static final int PAGE_SIZE = 10;
+
+
+    public void notifyDataSetChanged(List<T> result) {
+        if (result == null) {
+            // result说明返回数据失败,UI维持上次的状态，增加错误提示
+            this.isError = true;
+        } else if (result.size() == 0 && list.size() == 0) {
+            // 列表为空时要显示空布局
+            this.currentStatus = Status.MAIN_EMPTY;
+            this.isError = false;
+        } else {
+            this.isError = false;
+            // 请求成功
+            switch (this.currentAction) {
+                case INIT:
+                    // 刷新
+                    list.clear();
+                    break;
+                case MORE:
+                    // 分页
+                    // TODO 考虑total有变化时分页数据的有效性
+                    break;
+                case REFRESH:
+                    // 刷新
+                    list.clear();
+                    break;
+            }
+            // 添加数据
+            list.addAll(result);
+
+            if (result.size() == 0 || result.size() < PAGE_SIZE) {
+                // TODO 返回列表数量为0说明已经没有更多数据了,不能避免刚好加载最后PAGE_SIZE大小的数据的情况
+                this.currentStatus = Status.LIST_FULL;
+            } else {
+                this.currentStatus = Status.LIST_MORE;
+            }
+
+            // 检查列表是否初始化
+            if (this.mainListView == null) {
+                this.checkMainList();
+            } else {
+                adapter.notifyDataSetChanged();
+            }
+        }
+
+        this.isLoading = false;
+        this.notifyUIChanged();
+    }
+
 
 }

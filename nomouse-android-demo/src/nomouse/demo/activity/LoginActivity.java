@@ -3,7 +3,7 @@ package nomouse.demo.activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
-import nomouse.android.douga.R;
+import nomouse.android.demo.R;
 import nomouse.demo.fragment.LoginFragment;
 
 

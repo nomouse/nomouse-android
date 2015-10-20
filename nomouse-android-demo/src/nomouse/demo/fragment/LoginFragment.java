@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import nomouse.android.douga.R;
+import nomouse.android.demo.R;
 import nomouse.android.inject.InjectUtils;
 import nomouse.android.inject.InjectView;
 import nomouse.demo.activity.MainActivity;

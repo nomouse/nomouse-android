@@ -10,7 +10,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import nomouse.android.douga.R;
+import nomouse.android.demo.R;
 import nomouse.android.inject.InjectUtils;
 import nomouse.android.inject.InjectView;
 import nomouse.android.widget.EmptyView;
