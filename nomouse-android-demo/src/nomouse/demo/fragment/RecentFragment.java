@@ -19,6 +19,7 @@ public class RecentFragment extends android.support.v4.app.Fragment {
     @InjectView
     private PtrListView listView;
 
+    private HomeListAdapter adapter;
     private List<String> data;
 
     @Override
@@ -30,7 +31,7 @@ public class RecentFragment extends android.support.v4.app.Fragment {
         data = new ArrayList<>();
         data.add("123");
         data.add("456");
-        HomeListAdapter adapter = new HomeListAdapter(getActivity(), data);
+        adapter = new HomeListAdapter(getActivity(), data);
         listView.setAdapter(adapter, data);
 
         return rootView;

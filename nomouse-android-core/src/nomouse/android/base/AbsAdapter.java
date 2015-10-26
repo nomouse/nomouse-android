@@ -43,7 +43,7 @@ public abstract class AbsAdapter<T> extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder = ViewHolder.getViewHolder(context, convertView,
-                parent, getLayoutResId(position));
+                parent, getLayoutResId());
         convertView = holder.getConvertView();
         convert(holder, position, getItem(position));
         return convertView;
@@ -52,10 +52,9 @@ public abstract class AbsAdapter<T> extends BaseAdapter {
     /**
      * 获取Layout布局
      *
-     * @param res
      * @return
      */
-    public abstract int getLayoutResId(int res);
+    public abstract int getLayoutResId();
 
     /**
      * 渲染
@@ -70,7 +69,7 @@ public abstract class AbsAdapter<T> extends BaseAdapter {
         private View convertView;
 
         private ViewHolder(Context context, ViewGroup parent, int layoutId) {
-            viewMap = new SparseArray<View>();
+            viewMap = new SparseArray<>();
 
             this.convertView = LayoutInflater.from(context).inflate(layoutId,
                     parent, false);

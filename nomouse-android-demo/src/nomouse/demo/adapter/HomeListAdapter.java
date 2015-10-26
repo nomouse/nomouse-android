@@ -16,12 +16,12 @@ public class HomeListAdapter extends AbsAdapter<String> {
 
     @Override
     public void convert(ViewHolder holder, int position, String s) {
-        TextView text = holder.getView(R.id.text);
+        TextView text = holder.getView(R.id.text_title);
         text.setText(list.get(position));
     }
 
     @Override
-    public int getLayoutResId(int position) {
+    public int getLayoutResId() {
         return R.layout.home_list_item;
     }
 }

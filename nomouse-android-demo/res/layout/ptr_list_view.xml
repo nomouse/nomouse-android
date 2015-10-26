@@ -8,14 +8,14 @@
         android:id="@id/list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"
         ptr:ptrAnimationStyle="flip"
         ptr:ptrMode="pullFromStart" />
 
-    <nomouse.android.widget.LoadingView
+    <ViewStub
         android:id="@id/view_loading"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout="@layout/view_loading" />
 
     <ViewStub
         android:id="@id/view_error"
