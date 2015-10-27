@@ -9,7 +9,7 @@
         android:layout_marginTop="72dp"
         android:orientation="horizontal">
 
-        <nomouse.android.widget.ClearableEditText
+        <nomouse.android.demo.widget.ClearableEditText
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
         android:layout_marginTop="12dp"
         android:orientation="horizontal">
 
-        <nomouse.android.widget.ClearableEditText
+        <nomouse.android.demo.widget.ClearableEditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

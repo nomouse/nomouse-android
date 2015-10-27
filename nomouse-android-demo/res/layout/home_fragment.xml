@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="nomouse.demo.fragment.HomeFragment">
+    tools:context="nomouse.android.demo.fragment.HomeFragment">
 
     <Button
         android:id="@id/button"
@@ -20,7 +20,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/button" />
 
-    <nomouse.android.widget.EmptyView
+    <nomouse.android.demo.widget.EmptyView
         android:id="@+id/viewEmpty"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
