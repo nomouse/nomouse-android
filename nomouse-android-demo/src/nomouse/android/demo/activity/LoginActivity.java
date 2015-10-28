@@ -3,10 +3,10 @@ package nomouse.android.demo.activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
-import com.igexin.sdk.PushManager;
-
 import nomouse.android.demo.R;
 import nomouse.android.demo.fragment.LoginFragment;
+import rx.Observable;
+import rx.functions.Action1;
 
 
 public class LoginActivity extends FragmentActivity {
@@ -24,7 +24,14 @@ public class LoginActivity extends FragmentActivity {
                     .commit();
         }
 
-        PushManager.getInstance().initialize(this.getApplicationContext());
+        Observable
+                .just("Hello")
+                .subscribe(new Action1<String>() {
+                    @Override
+                    public void call(String s) {
+                        System.out.print(s);
+                    }
+                });
     }
 
 }
