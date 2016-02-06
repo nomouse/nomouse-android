@@ -1,3 +1,2 @@
 include ':nomouse-android-core'
 include ':nomouse-android-demo'
-include ':nomouse-android-push'
