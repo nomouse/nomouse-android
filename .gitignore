@@ -1,57 +1,43 @@
-#Common
-*.java.hsp
-*.sonarj
-*.sw*
-.DS_Store
-.settings
-.springBeans
-bin
-build.sh
-integration-repo
-jxl.log
-jmx.log
-derby.log
-argfile*
-activemq-data/
+# built application files
+*.apk
+*.ap_
 
-/build
-buildSrc/build
-/nomouse-*/build
-nomouse-test/test-output/
-/src/asciidoc/build
-target/
-ivy-cache
+# files for the dex VM
+*.dex
 
-#Ant
-build.xml
+# Java class files
+*.class
 
-#Maven
-target
-release.properties
-pom.xml.*
+# generated files
+bin/
+gen/
+out/
+build/
 
-#Gradle
-*.gradle
-
-#Android generated
-bin
-gen
+# Local configuration file (sdk path, etc)
 local.properties
-proguard-project.txt
 
-# Eclipse artifacts, including WTP generated manifests
+# Eclipse project files
 .classpath
 .project
-.settings
-spring-*/src/main/java/META-INF/MANIFEST.MF
 
-# IDEA artifacts and output dirs
+# Windows thumbnail db
+.DS_Store
+
+# IDEA/Android Studio project files, because
+# the project can be imported from settings.gradle
+.idea
 *.iml
+
+# Old-style IDEA project files
 *.ipr
 *.iws
-.idea
-out
-test-output
-atlassian-ide-plugin.xml
-.gradletasknamecache
-classes
+
+# Local IDEA workspace
+.idea/workspace.xml
+
+# Gradle cache
+.gradle
+
+# Sandbox stuff
+_sandbox
